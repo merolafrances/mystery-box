@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mystery Box — رحلة الإنسان</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+
+            <h1>Mystery Box</h1>
+
+            <div class="progress-wrapper">
+                <span id="progressText">1 / 11</span>
+
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Journey Thread -->
+        <section class="journey-section">
+
+            <div class="section-heading">
+                <span class="line"></span>
+                <h2>رحلتنا</h2>
+                <span class="line"></span>
+            </div>
+
+            <div class="thread-container">
+                <div class="thread"></div>
+
+                <div id="attachedCards" class="attached-cards">
+                    <!-- Cards will be added here -->
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Mystery Box Area -->
+        <section class="mystery-area">
+
+           
+
+            <!-- Mystery Box -->
+            <div id="mysteryBox" class="mystery-box">
+
+                <div class="box-glow"></div>
+
+                <div class="box-lid">
+                    <div class="box-lock">?</div>
+                </div>
+
+                <div class="box-body">
+                    <span class="box-symbol">✦</span>
+                </div>
+
+            </div>
+
+
+            <!-- Current Card -->
+            <div id="currentCardArea" class="current-card-area">
+
+                <div class="mystery-card" id="mysteryCard">
+
+                    <!-- Card Back -->
+                    <div class="card-face card-back">
+                        <div class="question-mark">?</div>
+
+                        <p>إيه القصة؟</p>
+
+                        <button id="openCardBtn" class="main-button">
+                            افتحي الكارت
+                        </button>
+                    </div>
+
+
+                    <!-- Card Front -->
+                    <div class="card-face card-front">
+
+                        <div id="cardNumber" class="card-number">
+                            01
+                        </div>
+
+                        <div id="cardEmojis" class="card-emojis">
+                            👨🏻 💤 🦴 👩🏻
+                        </div>
+
+                        <p class="guess-text">
+                            خمني إيه القصة؟
+                        </p>
+
+                        <button id="revealBtn" class="main-button">
+                            كشف الإجابة
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Revealed Answer -->
+                <div id="answerBox" class="answer-box">
+
+                    <div class="answer-icon">✨</div>
+
+                    <span class="answer-label">
+                        الإجابة هي
+                    </span>
+
+                    <h2 id="answerTitle">
+                        خلق المرأة
+                    </h2>
+
+                    <p id="answerKeyword">
+                        بداية الحكاية
+                    </p>
+
+                    <button id="attachBtn" class="main-button attach-button">
+                        علّقي الكارت على الرحلة
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Completion -->
+        <section id="completionMessage" class="completion-message">
+
+            <div class="completion-star">
+                ✨
+            </div>
+
+            <h2>
+                اكتملت الرحلة
+            </h2>
+
+            <p>
+                من الخلق... إلى إبراهيم وإسحق ويعقوب.
+            </p>
+
+            <div class="completion-line"></div>
+
+            <span>
+                11 نقطة • رحلة واحدة
+            </span>
+
+        </section>
+
+    </main>
+
+
+    <!-- Modal -->
+    <div id="cardModal" class="modal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-modal">
+                ×
+            </button>
+
+            <div id="modalEmojis" class="modal-emojis"></div>
+
+            <div id="modalNumber" class="modal-number"></div>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalKeyword"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
